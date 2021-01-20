@@ -1,0 +1,582 @@
+
+
+/*Colores
+#CD5555
+#882042
+#FFE8CF
+#C5A693
+*/
+
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Raleway",sans-serif ; 
+    background-color: #882042; 
+    color: #FFE8CF; 
+}
+
+/*Estilo cabecera, ico y logo*/
+.logo-trick:hover img{
+    
+    transform: rotate(720deg);
+    transition-duration: 1.5s;
+}
+.cabecera{
+    
+    background-image: url(../img/coconutchips.JPG);
+    background-size: cover;
+    height: 100vh;
+    background-position-y: 50%;
+    
+    position: relative;
+    
+    
+}
+.logo-box{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+.logo{
+    height: 100px;
+}
+.text-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.heading-primary{
+    color: #882042;
+    text-transform: uppercase;
+}
+.heading-primary-main{
+    display: block;
+    font-size: 50px;
+    font-weight: 800;
+    
+    
+}
+.heading-primary-sub{
+    display: block;
+    font-size: 140px;
+    font-weight: 800;
+    
+}
+
+/* Estilo para checkbox-trick hamburger*/
+.menu-wrapper{
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+}
+.toggle{
+    position: sticky;
+    top: 15px;
+}
+
+.menu-wrapper .toggle{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.menu-wrapper .hamburger{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 998;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-sizing: border-box;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+.menu-wrapper .hamburger .bar{
+    position: relative;
+    width: 100%;
+    height: 3px;
+    background: white;
+    z-index: 5;
+    transition: all 0.2s linear;
+}
+.menu-wrapper .hamburger .bar::before,
+.menu-wrapper .hamburger .bar::after{
+    content: '';
+    position: absolute;
+    top: -10px;
+    width: 100%;
+
+    
+    height: 3px;
+    background: white;
+    transition: all 0.2s linear;
+
+}
+.menu-wrapper .hamburger .bar::after{
+    top: 10px;
+    
+}
+
+.menu-wrapper .toggle:hover + .hamburger{
+    transform: rotate(-25deg);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+}
+
+.menu-wrapper .toggle:checked + .hamburger{
+    transform: rotate(45deg);
+    border-radius: 50%;
+
+}
+
+.menu-wrapper .toggle:checked:hover + .hamburger{
+    transform: rotate(135deg); 
+    border-radius: 50%;
+
+}
+
+.menu-wrapper .toggle:checked + .hamburger .bar::before,
+.menu-wrapper .toggle:checked + .hamburger .bar::after{
+    top: 0;
+    transform: rotate(90deg);
+    border-radius: 50%;
+
+}
+
+.menu{
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    opacity: 0;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    background: rgba(197, 166, 147, 0.829);
+    z-index: 1;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+}
+
+.menu ul li{
+    
+    
+    font-size: 50px;
+    list-style-type: none;
+    text-decoration: none;
+    text-align: center;
+    
+    cursor: pointer;
+    box-sizing: 15px;
+    display: block;
+    position: relative;
+    top: 50%;
+    transform: translate( 0, -425%);
+    margin-top: 65px;
+}
+a{
+    color: #882042;
+    text-decoration: none;
+}
+.links-menu{
+    
+    
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+a:hover{
+    
+    color: #FFE8CF;
+}
+
+.menu-wrapper .toggle:checked + .hamburger + .menu{
+    opacity: 1;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+
+/*Estilos contenido de texto pagina principal*/
+
+.contenido_bienvenida{
+    padding: 75px;
+    border-top: 3px solid white;
+    border-bottom:1px solid #FFE8CF;
+    
+}
+
+.titulo{
+    text-align: center;
+    font-size: 50px;
+}
+
+.bienvenida{
+    margin-top: 75px;
+    text-align: center;
+    
+}
+
+.icons ,.mapa{
+    
+    border: 1px solid #FFE8CF;
+    border-radius: 2em;
+    width: 100%;
+    height: 250px;
+    margin: 50px;
+    
+    
+}
+
+.icons{   
+font-size: 20px;       
+}
+.icons p{
+    
+    
+    color: #FFE8CF;
+    left: 5%;
+    
+}
+.flex-container .icons .fa , .icons p{
+    position: relative;
+    top: 5%;
+    margin-top: 15px;
+    
+}
+
+iframe{
+    padding: 0;
+    border-radius: 2em;
+    width:100%;
+    height:100%; 
+}
+
+/*Estilos contenido pagina principal*/
+.titulo-recetas{
+    
+    text-transform: uppercase;
+    position: relative;
+   top: 50px;
+   left: 50%;
+   margin-bottom: 100px;
+   transform: translate(-50%,0px);
+   display: inline-block;
+    
+   
+}
+.foto  p{
+    display: none;
+    position: relative;
+    top: 10vh;
+    left: 50%;
+    transform: translate(-50%,-50%);
+   
+}
+
+.foto {
+   
+    height: 200px;
+    background-image: url(../img/Granola.JPG);
+    background-position: center;    
+    background-size: cover;
+    width: 100%;
+    
+}
+
+.foto:hover p {
+    
+    opacity: 1;
+    display: inline-block;
+    font-size: 6vh;
+    font-weight: 800;
+    text-align: center;
+    color: #FFE8CF;
+  
+}
+
+.foto:hover{
+    opacity: 0.7;
+    transition-duration: 0.7s;
+    
+}
+
+.foto2{
+    margin-top: 10vh;
+
+    height: 200px;
+    background-image: url(../img/greensmothie.JPG);
+    background-position-y: 30%;    
+    background-size: cover;
+    width: 100%;
+}
+
+.foto2  p{
+    display: none;
+    position: relative;
+    top: 10vh;
+    left: 50%;
+    transform: translate(-50%,-50%);
+   
+}
+
+
+.foto2:hover p {
+    opacity: 1;
+    display: inline-block;
+    font-size: 6vh;
+    font-weight: 800;
+    color: #FFE8CF;
+    
+}
+
+.foto2:hover{
+    opacity: 0.7;
+    transition-duration: 0.7s;
+}
+
+.foto3{
+    margin-top: 10vh;
+
+
+    height: 200px;
+    background-image: url(../img/PBcookies.JPG);
+    background-position-y: 40%;    
+    background-size: cover;
+    width: 100%;
+}
+
+.foto3  p{
+    display: none;
+    position: relative;
+    top: 10vh;
+    left: 50%;
+    transform: translate(-50%,-50%);
+   
+}
+
+
+.foto3:hover p {
+    opacity: 1;
+    display: inline-block;
+    font-size: 6vh;
+    font-weight: 800;
+    color: #FFE8CF;
+}
+
+.foto3:hover{
+    opacity: 0.7;
+    transition-duration: 0.7s;
+}
+/*Estilos galeria*/
+
+.img-box{
+    position: relative;
+    top: 50px;
+    left: 5%;
+}
+
+.img-gallery{
+    margin: 10px;
+    width: 30%;
+    border: 1px ;
+    border-radius: 1em;
+}
+
+.img-gallery:hover{
+
+    transform: scale(1.2,1.2);
+  
+    border: 4px solid #FFE8CF;
+    border-radius: 1em;
+    transition-duration: 0.3s;
+    box-shadow: 10px 5px 5px black;
+    
+    
+}
+/*Estilos tabla*/
+
+table{
+    text-align: center;
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 10%);
+    
+    height: auto;
+    width: 70%;
+
+    
+    
+    
+}
+ tr, td,th{
+   border-radius: 1rem;
+   border: 1px solid #FFE8CF;
+}
+td{
+    font-weight: 800;
+}
+
+tbody:hover td[rowspan], tr:hover td {
+    background: #FFE8CF; 
+    color: #882042;
+    border:1px solid #882042;
+    box-shadow: 3px 1.5px 1.5px black;
+    transform: scale(1.15,1.15);
+    transition-duration: 0.3s;
+ }
+
+
+/*Estilos ABOOUT US*/
+.concept{
+    text-align: center;
+    margin: 150px;
+}
+.flex-container{
+    
+    display: flex;
+    flex-wrap: nowrap;
+   
+}
+.flex-container > .mision,.vision,.values{
+    padding: 30px;
+    border: 1px solid #FFE8CF;
+    border-radius: 2em;
+    width: 100%;
+    margin: 15px;
+    text-align: center;
+    color:#88204300 ;
+
+}
+ .top{   
+    
+    position: relative;
+    top: 45%;
+    
+    color: #FFE8CF;
+}
+
+.flex-container >  div:hover {
+    background-image:linear-gradient(rgba(205, 85, 85, 0.658),rgba(197, 166, 147, 0.658));
+    transform: scale(1.15,1.15);
+    transition-duration: 0.7s;
+    color: #FFE8CF;
+    background-position: center ;
+    box-shadow: 10px 10px 10px  black;
+    
+   
+}
+.flex-container > div:hover strong{
+    color: #88204300;
+    
+}
+
+.top-text{
+    
+    position: relative;
+    translate: -50%,-50%;
+    top: 0;
+    
+}
+
+
+
+
+
+
+/*Estilos del footer*/
+.footer-container{
+    margin-top: 20vh;
+
+     width: 100%; /* Que ocupe el tamaño dependiendo del espacio */
+     border-bottom: 1px solid #FFE8CF;
+     border-top: 1px solid #FFE8CF;
+     height: 100px;
+     clear: both;
+     text-align: center;
+    background: #882042;
+}
+
+.footer-container img {
+    position: relative;
+    display: inline-block;
+    height: 55%;
+    
+    top: 15%;
+   
+}
+
+.footer-container2{
+    width: 100%; 
+    border-bottom: 1px solid #FFE8CF;
+     
+    height: 184px; 
+    text-align: center;
+    background: #882042;
+}
+
+.footer-container2 img {
+    height: 150px;
+    margin: 10px;
+    text-align: center;
+}
+.footer-container-derecha{
+    position: absolute;
+    right: 15px;
+
+}
+.footer-container2-izquierda{
+    position: absolute;
+    left: 15px;
+}
+
+.footer-container2 p{
+    color: #FFE8CF;
+    display: inline-block;
+    width: 200px;
+    height: 139px;
+    padding-top: 45px;
+    position: absolute;
+    right: 50%;
+    transform: translate(30%, 0%);
+}
+
+.yo:hover .jeje{
+    display: block;
+    transform: rotate(-25deg);
+    
+    background: black;
+    font-size: 25px;
+    transition-duration: 0.7s;
+    text-transform: uppercase;
+               
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="hora.js"></script>
+
+</head>
+
+<body onload="init()">
+  <div id="clockdate">
+    <div class="clockdate-wrapper">
+      <div id="clock"></div>
+      <div id="date"></div>
+
+    </div>
+  </div>
+  <div class="container">
+
+
+    <header>
+
+      <div class="cabecera" onclick="toggle();">
+        <img src="./img/alvaro1 (1).png" alt="" class="logo">
+      </div>
+
+
+    </header>
+    <nav>
+      <div class="linkContainer">
+        <a href="./index.html" class="links">HOME</a>
+        <a href="./contact.html" class="links">CONTACT</a>
+        <a href="./about.html" class="links">ABOUT</a>
+        <a href="./work.html" class="links last">WORK</a>
+
+      </div>
+
+      <hr>
+      <div class="iconos">
+        <a target='_blank' href="https://codepen.io/Malakian96/pens/public">
+          <i class="fa fa-codepen fa-2x ico"></i>
+        </a>
+        <a target='_blank' href="https://www.instagram.com/malakian.alvaro/">
+          <i class="fa fa-instagram fa-2x ico"></i>
+        </a> <a target='_blank' href="https://www.linkedin.com/in/alvaro-arpal-708620130/">
+          <i class="fa fa-linkedin fa-2x ico"></i>
+        </a> <a target='_blank' href="https://github.com/Alvaro-DAW">
+          <i class="fa fa-github fa-2x ico"></i>
+        </a>
+      </div>
+
+      <hr>
+
+
+    </nav>
+
+    <div class="content">
+
+      <div class="miniaturas">
+
+        <div class="fotos1">
+
+          <a target='_blank' href="./projects/Projecte1/"><img src="./img/hme-miniatura.png" alt=""></a>
+          <a target='_blank' href="http://www.tiendaalvaro.com.mialias.net/M14_Ac3/public/index.php/" id='symfony' onclick="return false" ><img
+              src="./img/symfony21.png" alt=""></a>
+
+
+        </div>
+      </div>
+
+      <button id="myBtn">Open Modal</button>
+
+
+      <div id="myModal" class="modal">
+
+
+        <div class="modal-content">
+         
+          <p>Credenciales hosting: tienda460 Ygnj6C6O</p>
+         
+          
+          <p>Credenciales web: admin 123</p>
+          
+          <span class="close">&times;</span>
+        </div>
+
+      </div>
+    </div>
+    <footer>
+      <p id="fecha"></p>
+      <p>Copyright © 2020 Alvaro Arpal Alonso. All right reserved</p>
+      <a href="./fet.html">Com s'ha fet</a>
+    </footer>
+  </div>
+  <!--
+        Iconos Redes
+<i class="fab fa-codepen"></i>
+<i class="fab fa-instagram"></i>
+<i class="fab fa-linkedin"></i>
+<i class="fab fa-twitch"></i>
+<i class="fab fa-reddit"></i>
+<i class="fab fa-github"></i>
+    -->
+  <script src="./js/app.js"></script>
+</body>
+
+</html>

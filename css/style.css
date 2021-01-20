@@ -1,0 +1,364 @@
+/* colores
+ #f8f3f1
+ #fa991c
+ :#002c3e
+ :#78bcc4
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+}
+
+.container {
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    grid-template: "head p p" 1fr "nav p p" 33fr "footer footer footer" 1fr / 2fr 20fr;
+}
+
+header {
+    background-color: #fa991c;
+    grid-area: head;
+}
+
+.logo {
+    max-width: 100%;
+    padding: 5%;
+}
+
+.cabecera {
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: solid 3px #f8f3f1;
+    border-right: solid 3px #f8f3f1;
+}
+
+.content {
+    background-color: #002c3e;
+    grid-area: p;
+    text-align: center;
+    
+}
+
+nav {
+    background-color: #78bcc4;
+    grid-area: nav;
+    border-right: solid 3px #f8f3f1;
+}
+
+footer {
+    background-color: #fa991c;
+    grid-area: footer;
+}
+
+.iconos, .linkContainer {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+
+.links {
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.ico, .links {
+    color: #002c3e;
+}
+
+.ico:hover, .links:hover {
+    color: #f8f3f1;
+    transition-duration: 250ms;
+}
+
+h1 {
+    color: #f8f3f1;
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 4em;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 5%;
+}
+
+.paco {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.paco>input {
+    width: 50%;
+}
+
+.paco2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+input, textarea {
+    background-color: #78bcc4;
+    margin: 0.5em;
+    height: 4em;
+    box-sizing: border-box;
+    border: 3px solid #f8f3f1;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+input:focus, textarea:focus {
+    border: 3px solid #fa991c;
+}
+
+.button {
+    
+
+
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: #78bcc4;
+    color: black;
+    border: 2px solid #fa991c;
+}
+
+
+.button:hover {
+    border: 2px solid #f8f3f1;
+    background-color: #fa991c;
+    color: #f8f3f1;
+}
+.bienvenida{
+    margin:0;
+    width: 100%;
+    font-size: 4em;
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+.fet{
+  
+        text-align: start;
+        color: #f8f3f1;
+        margin-left: 2em;
+        
+        
+    
+}
+.fet>p{
+    margin: 2em;
+}
+.about{
+    text-align: start;
+    color: #f8f3f1;
+    
+}
+.about>div>p>a{
+    text-decoration:none;
+   color: #fa991c;
+}
+.about>div{
+  
+    margin-left: 2em;
+}
+.about>div>h2{
+    margin-top: 1em;
+    font-size: 3em;
+}
+.about>div>p{
+    font-weight: normal;
+    font-size: 1em;
+    margin-top: 1em;
+}
+.about>div>div{
+    text-align: center;
+    
+}
+.about>div>div>img{
+   margin-top: 6em;
+    width: 30%;
+}
+.miniaturas{
+    margin-top:3em;
+    
+}
+.miniaturas,.fotos1{
+    width: 100%;
+    height: 100%;
+}
+
+.fotos1>a>img{
+    width: 18%;
+    margin: 4rem;
+}
+.fotos1>a>img:hover{
+    transform: scale(1.50,1.50);
+    transition-duration: 0.7s;
+}
+footer{
+    text-align: center;
+}
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+   
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #fa991c;
+    margin: auto;
+    padding: 0;
+    height: 15em;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+  }
+  /* The Close Button */
+.close {
+    color: white;
+    
+    font-size: 28px;
+    font-weight: bold;
+    
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+  }
+  
+  .modal-body {padding: 2px 16px;}
+  
+  .modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+  }
+  
+  /* Add Animation */
+  @-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+  }
+  
+  @keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+  }
+ 
+  
+@media only screen and (max-width: 1200px) {
+    .container {
+        display: grid;
+        width: 100%;
+        height: 100vh;
+        grid-template: "head nav nav" 1fr "p p p" 10fr "footer footer footer" 1fr / 1fr 7fr;
+    }
+    .iconos, .linkContainer {
+        height: 50%;
+        display: flex;
+        flex-direction: row;
+    }
+    .miniaturas>div{
+        display:flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        
+    }
+    .miniaturas,.miniaturas>div{
+        max-width: 100%;
+        max-height: 100%;
+    }
+    .miniaturas>div>a>img{
+      max-width: 80%;
+      padding: 2em;
+    
+    }
+    .fotos1>a>img{
+        width: 100%;
+        margin: 0;
+    }
+    .fotos1>a>img:hover{
+        transform: scale(1.15,1.15);
+        transition-duration: 0.7s;
+    }
+}
+
+@media only screen and (max-width: 780px) {
+    .container {
+        display: grid;
+        width: 100%;
+        height: 100vh;
+        grid-template: "nav nav nav" 1fr "p p p" 10fr "footer footer footer" 1fr / 1fr 7fr;
+    }
+    .cabecera {
+        display: none;
+    }
+    .miniaturas>div{
+        display:flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    .miniaturas,.miniaturas>div{
+        max-width: 100%;
+        max-height: 100%;
+    }
+    .miniaturas>div>a>img{
+      max-width: 80%;
+      padding: 2em;
+    
+    }
+    .fotos1>a>img{
+        width: 100%;
+        margin: 0;
+    }
+    .fotos1>a>img:hover{
+        transform: scale(1.25,1.25);
+        transition-duration: 0.7s;
+    }
+}
